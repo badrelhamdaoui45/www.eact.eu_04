@@ -1096,7 +1096,7 @@ $.ajax({
 			} else if (data_trim === "D1") { 
 			// Database Error
 			grecaptcha.reset();		
-			$("#msg_contact").text( "Database Error – Please email us on secretary@eact.eu" );	
+			$("#msg_contact").text( "Database Error – Please email us on contact@eact.online" );	
 	
 				
 			} else if (data_trim === "OK") { 
