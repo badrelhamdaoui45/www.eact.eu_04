@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.eact.eu/articles/fx-hedging-in-volatile-markets/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Mar 2024 08:41:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The EACT (European Association of Corporate Treasurers) is a grouping of national associations representing treasury and finance professionals in 22 countries in Europe, bringing together around 13,000 members representing 6,500 groups/companies.">
+    <meta name="author" content="European Association of Corporate Treasurers (EACT)">
+    
+    <!-- Open graph -->
+	<meta property="og:title" content="FX Hedging in Volatile Markets" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="index.html" />
+	<meta property="og:site_name" content="European Association of Corporate Treasurers (EACT)" />            
+        
+        
+    <title>FX Hedging in Volatile Markets</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../../Core/Images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../Core/Images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../Core/Images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../Core/Images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../Core/Images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../Core/Images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../Core/Images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../Core/Images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../Core/Images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../Core/Images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../Core/Images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../Core/Images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../Core/Images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../Core/Images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../../Core/Images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#201B3E">
+
+
+<!-- Typekit -->
+<script src="../../../use.typekit.net/ets1vbu.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Google Search --> 
+<script async src="../../../cse.google.com/f095b.txt?cx=008200498676483122275:960vmx6ak3o"></script>
+
+<!-- Font Awsome -->
+<script src="../../../use.fontawesome.com/952339410b.js"></script>
+
+<link rel="stylesheet" href="../../Core/CSS/eact_build.min.css"/>
+<link rel="stylesheet" href="../../Core/CSS/coreb232.css?v2.4.5"/>
+
+
+
+    <!-- Bootstrap core CSS -->    
+</head>
+<body class="dark-white_b" id="pagebody" onLoad="navagationwidth()" style="background-color: #F2F2F2">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-106218462-1', 'auto');
+  ga('send', 'pageview');
+</script><div id="fakeloader"></div><div class="visible-xs greenb"><a href="../../index.html"><img id="logo" src="../../Core/Images/Logos/EACT-Logo_White_August17.png" alt="European Association of Corporate Treasurers (EACT)" /></a></div><nav class="navbar navbar-default navbar-fixed-top hidden-xs" id="navagation_all">
+  <div class="container-fluid maxwidth1366 greenb" id="navagation_container">
+   
+  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" id="navagation_header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navagation" aria-expanded="false" style="border:none;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a href="../../index.html"><img id="logo" src="../../Core/Images/Logos/EACT-Logo_White_August17.png" alt="European Association of Corporate Treasurers (EACT)" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main_navagation" style="width:1000px;">
+      <ul class="nav navbar-nav" id="navmorecolapse" style="position:relative">  
+	  	 <li ><a href="../../index.html">Home</a></li> <li ><a href="../../about.html">About Us</a></li> <li ><a href="../../nta.html">Members</a></li> <li class="active"><a href="../../articles.html">Articles</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Knowledge Hub <span class="caret"></span></a><ul class="dropdown-menu"> <li ><a href="../../briefing-focus.html">Briefing Focus</a></li> <li ><a href="../../financial-crime.html">Financial Crime</a></li> <li ><a href="../../journeys-to-treasury.html">Journeys To Treasury</a></li> <li ><a href="../../digitalization.html">Digitalization</a></li> <li ><a href="../../payments.html">Payments</a></li></ul></li> <li ><a href="../../regulation-and-policy.html">Regulation & Policy</a></li> <li ><a href="../../news.html">News</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Initiatives <span class="caret"></span></a><ul class="dropdown-menu"> <li ><a href="https://eact.events/" target="_blank">EACT Summit</a></li> <li ><a href="../../euro-pp-charter.html">Euro PP Charter</a></li> <li ><a href="../../fx-global-code.html">FX Global Code Register</a></li> <li ><a href="../../financial-regulation-advisory-group.html">Financial Regulation Advisory Group (FRAG)</a></li></ul></li> <li ><a href="../../event.html">Events</a></li> <li ><a href="https://eactexchange.eact.eu/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;Members Area</a></li>
+		
+		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<strong>More</strong><span class="caret"></span>
+		</a>
+		  <ul class="dropdown-menu dropdown-menu-right" id="collapsed"></ul>
+		 </li>
+		 
+		 
+      </ul>
+	   
+	 
+<ul class="nav navbar-nav right">
+      <a id="search_popup" class="btn btn-eact-success btn-square" style="height:50px; padding-top:15px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+</ul>
+
+     <!-- <ul class="nav navbar-nav right">
+		  <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Members Area</a></li>
+	  </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	
+<div class="container-fluid">
+	<div class="row npm marginbottom10" id="carousel">
+		<div class="col-xs-12 nopadding">
+			<!-- Carousel : BEGIN -->			
+			<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+				  				  
+                                  
+				<div class="item active" style="height: 400px; width: 100%; background:  url('../../Core/Images/Articles/eact-article-fxhedging.jpg');	background-repeat: no-repeat; background-size:cover; background-position:center; ">
+                    
+                    
+					
+				</div>
+			  </div>
+			</div>		
+			<!-- Carousel : END -->		
+		</div>
+	</div>
+</div>
+<div class="container-fluid maxwidth1366" style="margin-top: 10px;">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-md-9 small-col-gutter">
+			<div id="article_body" class="margintop-375">
+				<h1 class="news">FX Hedging in Volatile Markets</h1>
+				
+				<div><p><strong>In the fifth article in this special COVID-19 series, JTT partners consider the impact that the combination of constrained liquidity and FX volatility are having on the way that treasurers manage their FX risk.<br /><br /></strong></p>
+<h3>Initial Impact of the Crisis on Foreign Exchange</h3>
+<p>As we explored in previous articles in this series, the initial impact of the pandemic on financial markets was on liquidity. This had an impact on FX as treasurers needed to source cash to fund liabilities in a particular currency. When liquidity was in short supply, therefore, some treasurers were obliged to access liquidity in whatever currency they could, and then swap into the required currency. Furthermore, liquidity in some currency pairs dried up and spreads widened, creating further obstacles, complexity and cost. Although market liquidity is easing, albeit not to pre-pandemic levels, constraints in FX continue, with particular challenges in emerging markets.<br /><br /></p>
+<p><em>&ldquo;One issue that treasurers are having to contend with is execution risk. While they may have access to funding, they need to convert this to their currency of choice which can be difficult in the current market. There are different ways of achieving this. For example, we are seeing significant interest in our suite of Algo execution services that offer our clients dynamic execution through more liquidity venues.&rdquo;</em> &mdash; Ruth Bellinger, Head of IRFX Macro Sales UK, BNP Paribas Global Markets<br /><br /></p>
+<p>With many companies seeing revenues plunging, treasurers are often finding themselves overhedged. It is typical to see treasurers hedging 80% or more of exposures up to 3 months. In addition, many have hedged dividends that are being postponed or reduced. Many are pushing these cash flow hedges forward, swapping forward or using risk reversals and collars.<br /><br /></p>
+<p><em>&ldquo;We&rsquo;re seeing more treasurers selectively using options. Some clients are obligated to sell currencies that have significantly devalued. Option-based solutions offer the opportunity to benefit from future currency appreciation. Others are looking to sell volatility via outperformance trades, although generally only those who are not seeking to apply hedge accounting treatment.&rdquo;</em> &mdash; Ruth Bellinger, BNP Paribas Global Markets<br /><br /></p>
+<h3>The Problem of Exposures</h3>
+<p>Although some treasurers are taking proactive steps to adapt their hedging approach to changing circumstances, this requires a complete view of exposures. For many, this is a challenge at the best of times, let alone during periods of extreme uncertainty. There can be a variety of reasons for this, not least fragmented systems, lack of centralised treasury control, and a lack of awareness of the importance of forecasting at a business level.<br /><br /></p>
+<p><em>&ldquo;As we discussed in the last article in this series, cash flow forecasting is extremely difficult in the current climate, with major revenue changes in a very short time, and significant future uncertainty. Overhedged positions create problems under hedge accounting rules, with complex delinking and reallocation of hedges, while it is not necessarily a good time to unwind hedges.&rdquo;</em> &mdash; Francois Masquelier, EACT<br /><br /></p>
+<p>Treasurers are also prioritising their exposures, and identifying which currencies are considered material for hedging. There are two competing forces in this regard: if an exposure currency is more volatile, it may be considered more material for hedging due to the higher value at risk (VaR); on the other hand, softer currencies are generally more expensive to hedge particularly given the current lack of market liquidity, which may make hedging less worthwhile. This puts treasurers between a rock and a hard place in deciding whether to start or stop hedging certain less material exposure currencies.<br /><br /></p>
+<p><em>&ldquo;If a treasurer chooses not to hedge, they need to monitor this over time to ensure that the decision remains valid.&rdquo;</em> &mdash; Francois Masquelier, EACT<br /><br /></p>
+<h3>Leveraging Technology</h3>
+<p>Efficient systems, data collation processes and reporting tools have a key role to play in creating a complete view of exposures, analysing how sensitive these exposures are to different economic and market scenarios, and identifying opportunities to optimise FX management.<br /><br /></p>
+<p><em>&ldquo;You need the right data, and presentation of this data, to enable treasurers to gain meaningful insights into liquidity and cash and exposures, and to initiate the appropriate measures. With better insights, we are seeing treasurers taking a range of actions, such as smaller, &lsquo;follow the sun&rsquo; hedges as spreads widen during the day, and more agile approaches to hedging solutions.&rdquo; &mdash;</em> Dr Arif Esa, Director, Treasury Management, SAP<br /><br /></p>
+<p>In many cases, treasurers had already put in place integrated mechanisms to gather and present exposures effectively, with the crisis accelerating initiatives that were ongoing. Where FX was less of an issue under &lsquo;business as usual&rsquo; conditions, treasurers may now be looking for quick fixes.<br /><br /></p>
+<p><em>&ldquo;Several clients are now looking to understand the opportunities to integrate systems to collect exposures more efficiently, and monitoring bank credit lines, customer default rates and other key metrics that impact on liquidity, working capital and risk more closely.&rdquo;</em> &mdash; Dr Arif Esa, SAP<br /><br /></p>
+<p>Artificial-intelligence (AI)-based predictive analytics have become increasingly common amongst treasurers to create perspectives on customer behaviours, working capital, future cash flows and exposures, and there may be a tendency to move away from these techniques during anomalous market and economic conditions. In reality, however, these tools continue to be helpful in predicting the impact that the pandemic could have on key metrics.</p>
+<p>It is not only in treasury where the benefits of more automated processes, sophisticated analysis and accessible reporting accrue. Senior management have become more focused on FX &ndash; as well as other treasury responsibilities &ndash; during the crisis.<br /><br /></p>
+<p><em>&ldquo;One of the effects of the crisis is that senior management are looking for more regular reporting, not only on the initial impact of the crisis on FX, but also the effect of FX on future cash flow and P&amp;L. This can take a substantial amount of time, and take away from other critical activities on which treasurers are engaged without the right tools in place.&rdquo;&nbsp;</em>&mdash; Sebastian di Paola, Partner, PwC<br /><br /></p>
+<h3>Lessons from the Crisis</h3>
+<p>While it would be inappropriate to discuss the &lsquo;opportunities&rsquo; associated with a pandemic, bearing in mind the scale of human tragedy, the crisis has emphasised valuable lessons for treasurers in the way that they manage their FX activities, both during a crisis and &lsquo;business as usual&rsquo;, whatever that might resemble.<br /><br /></p>
+<p><em>&ldquo;Many treasurers have recognised the need to revisit their FX exposure and hedging processes as a result of the crisis, which seemed less of a priority during business as usual. For example, solutions such as Kantox, with which BNP Paribas has a partnership, helps automate the execution of FX hedges and make the process more systematic, particularly when hedging a large volume of small exposures.&rdquo;</em> &mdash; Francois Masquelier, EACT<br /><br /></p>
+<p>In many cases, the crisis has resulted in treasurers redoubling their efforts to improve operational efficiency and control.<br /><br /></p>
+<p><em>&ldquo;While automated FX execution has become increasingly important for treasury teams, we are also seeing the pace and urgency of wider initiatives increasing to centralise cash and treasury management activities at a group level, automate processes, and optimise account structures. Treasurers are demanding more real-time information, and issues such as real-time hedging are now part of client discussions as real-time payments and liquidity become a reality.</em>&rdquo; &mdash; Reuben Kane, FX+ Distribution, Global Markets, BNP Paribas<br /><br /></p>
+<h3>Top Tips</h3>
+<p><em><br />&ldquo;Review exposure collection and hedging processes as a priority to improve accuracy of exposures and refine approaches to hedging&rdquo;</em> &mdash; Francois Masquelier, EACT<br /><br /></p>
+<p><em>&ldquo;Consider automation tools and Algo execution to enable less of a focus on execution, and more on strategy. Communicate regularly with banks who have experience across a wide spectrum of clients, and can therefore offer suggestions and solutions.&rdquo;</em> &mdash; Ruth Bellinger, BNP Paribas<br /><br /></p>
+<p><em>&ldquo;Review short term forecasts daily; measure existing hedges against this forecast; ensure that people are authorised to deal in the markets if employees who ordinarily undertake these activities are not available.&rdquo;</em> &mdash; Dr Arif Esa, SAP<br /><br /></p>
+<p><em>&ldquo;Continue and potentially accelerate programmes that are underway to centralise, digitise and increase transparency of treasury processes and information. Identify what activities are core and non-core, and which risks are material or less so. Look at optimising account structures to reduce trapped liquidity.&rdquo;</em> &mdash; Reuben Kane, BNP Paribas<br /><br /></p>
+<p><em>&ldquo;Use the opportunity of increased senior management and Board scrutiny to educate and inform on what treasury does, the value it offers, and equally what it cannot do, such as managing economic risk and the associated FX risks, which remains a management responsibility.&rdquo; &mdash;</em> Sebastian di Paola, PwC</p>
+<p>&nbsp;</p>
+<p><strong><br />2020 is the fifth anniversary year of the Journeys to Treasury partnership, comprising BNP Paribas, European Association of Corporate Treasurers (EACT), SAP and PwC. We are marking this special alliance with a &lsquo;Journeys to Treasury Bitesize&rsquo; series, providing topical insights and support for treasurers as they navigate this challenging period.</strong></p></div>
+				
+									
+				
+			</div>
+		</div>
+		
+		
+		<div class="col-xs-12 col-sm-2 col-md-3 small-col-gutter">
+			<div class="margintop-85">
+				<span class="social-button-pre social-share">SHARE</span><a class="social-button-a" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.eact.eu/articles/fx-hedging-in-volatile-markets/&title=FX+Hedging+in+Volatile+Markets&summary=In+the+fifth+article+in+this+special+COVID-19+series%2C+JTT+partners+consider+the+impact+that+the+combination+of+constrained+liquidity+and+FX+volatility+are+having+on+the+way+that+treasurers+manage+their+FX+risk.%0D%0AInitial+Impact+of+the+Crisis+on+Foreign+Exchange%0D%0AAs+we+explored+in+previous+articles+in+this+series%2C+the+initial+impact+of+the+pandemic+on+financial+markets+was+on+liquidity.+This+had+an+impact+on+FX+as+treasurers+needed+to+source+cash+to+fund+liabilities+in+a+particular+currency.+When+liquidity+was+in+short+supply%2C+therefore%2C+some+treasurers+were+obliged+to+access+liquidity+in+whatever+currency+they+could%2C+and+then+swap+into+the+required+currency.+Furthermore%2C+liquidity+in+some+currency+pairs+dried+up+and+spreads+widened%2C+creating+further+obstacles%2C+complexity+and+cost.+Although+market+liquidity+is+easing%2C+albeit+not+to+pre-pandemic+levels%2C+constraints+in+FX+continue%2C+with+particular+challenges+in+emerging+markets.%0D%0A%26ldquo%3BOne+issue+that+treasurers+are+having+to+contend+with+is+execution+risk.+While+they+may+have+access+to+funding%2C+they+need+to+convert+this+to+their+currency+of+choice+which+can+be+difficult+in+the+current+market.+There+are+different+ways+of+achieving+this.+For+example%2C+we+are+seeing+significant+interest+in+our+suite+of+Algo+execution+services+that+offer+our+clients+dynamic+execution+through+more+liquidity+venues.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+Head+of+IRFX+Macro+Sales+UK%2C+BNP+Paribas+Global+Markets%0D%0AWith+many+companies+seeing+revenues+plunging%2C+treasurers+are+often+finding+themselves+overhedged.+It+is+typical+to+see+treasurers+hedging+80%25+or+more+of+exposures+up+to+3+months.+In+addition%2C+many+have+hedged+dividends+that+are+being+postponed+or+reduced.+Many+are+pushing+these+cash+flow+hedges+forward%2C+swapping+forward+or+using+risk+reversals+and+collars.%0D%0A%26ldquo%3BWe%26rsquo%3Bre+seeing+more+treasurers+selectively+using+options.+Some+clients+are+obligated+to+sell+currencies+that+have+significantly+devalued.+Option-based+solutions+offer+the+opportunity+to+benefit+from+future+currency+appreciation.+Others+are+looking+to+sell+volatility+via+outperformance+trades%2C+although+generally+only+those+who+are+not+seeking+to+apply+hedge+accounting+treatment.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+BNP+Paribas+Global+Markets%0D%0AThe+Problem+of+Exposures%0D%0AAlthough+some+treasurers+are+taking+proactive+steps+to+adapt+their+hedging+approach+to+changing+circumstances%2C+this+requires+a+complete+view+of+exposures.+For+many%2C+this+is+a+challenge+at+the+best+of+times%2C+let+alone+during+periods+of+extreme+uncertainty.+There+can+be+a+variety+of+reasons+for+this%2C+not+least+fragmented+systems%2C+lack+of+centralised+treasury+control%2C+and+a+lack+of+awareness+of+the+importance+of+forecasting+at+a+business+level.%0D%0A%26ldquo%3BAs+we+discussed+in+the+last+article+in+this+series%2C+cash+flow+forecasting+is+extremely+difficult+in+the+current+climate%2C+with+major+revenue+changes+in+a+very+short+time%2C+and+significant+future+uncertainty.+Overhedged+positions+create+problems+under+hedge+accounting+rules%2C+with+complex+delinking+and+reallocation+of+hedges%2C+while+it+is+not+necessarily+a+good+time+to+unwind+hedges.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0ATreasurers+are+also+prioritising+their+exposures%2C+and+identifying+which+currencies+are+considered+material+for+hedging.+There+are+two+competing+forces+in+this+regard%3A+if+an+exposure+currency+is+more+volatile%2C+it+may+be+considered+more+material+for+hedging+due+to+the+higher+value+at+risk+%28VaR%29%3B+on+the+other+hand%2C+softer+currencies+are+generally+more+expensive+to+hedge+particularly+given+the+current+lack+of+market+liquidity%2C+which+may+make+hedging+less+worthwhile.+This+puts+treasurers+between+a+rock+and+a+hard+place+in+deciding+whether+to+start+or+stop+hedging+certain+less+material+exposure+currencies.%0D%0A%26ldquo%3BIf+a+treasurer+chooses+not+to+hedge%2C+they+need+to+monitor+this+over+time+to+ensure+that+the+decision+remains+valid.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0ALeveraging+Technology%0D%0AEfficient+systems%2C+data+collation+processes+and+reporting+tools+have+a+key+role+to+play+in+creating+a+complete+view+of+exposures%2C+analysing+how+sensitive+these+exposures+are+to+different+economic+and+market+scenarios%2C+and+identifying+opportunities+to+optimise+FX+management.%0D%0A%26ldquo%3BYou+need+the+right+data%2C+and+presentation+of+this+data%2C+to+enable+treasurers+to+gain+meaningful+insights+into+liquidity+and+cash+and+exposures%2C+and+to+initiate+the+appropriate+measures.+With+better+insights%2C+we+are+seeing+treasurers+taking+a+range+of+actions%2C+such+as+smaller%2C+%26lsquo%3Bfollow+the+sun%26rsquo%3B+hedges+as+spreads+widen+during+the+day%2C+and+more+agile+approaches+to+hedging+solutions.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+Director%2C+Treasury+Management%2C+SAP%0D%0AIn+many+cases%2C+treasurers+had+already+put+in+place+integrated+mechanisms+to+gather+and+present+exposures+effectively%2C+with+the+crisis+accelerating+initiatives+that+were+ongoing.+Where+FX+was+less+of+an+issue+under+%26lsquo%3Bbusiness+as+usual%26rsquo%3B+conditions%2C+treasurers+may+now+be+looking+for+quick+fixes.%0D%0A%26ldquo%3BSeveral+clients+are+now+looking+to+understand+the+opportunities+to+integrate+systems+to+collect+exposures+more+efficiently%2C+and+monitoring+bank+credit+lines%2C+customer+default+rates+and+other+key+metrics+that+impact+on+liquidity%2C+working+capital+and+risk+more+closely.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+SAP%0D%0AArtificial-intelligence+%28AI%29-based+predictive+analytics+have+become+increasingly+common+amongst+treasurers+to+create+perspectives+on+customer+behaviours%2C+working+capital%2C+future+cash+flows+and+exposures%2C+and+there+may+be+a+tendency+to+move+away+from+these+techniques+during+anomalous+market+and+economic+conditions.+In+reality%2C+however%2C+these+tools+continue+to+be+helpful+in+predicting+the+impact+that+the+pandemic+could+have+on+key+metrics.%0D%0AIt+is+not+only+in+treasury+where+the+benefits+of+more+automated+processes%2C+sophisticated+analysis+and+accessible+reporting+accrue.+Senior+management+have+become+more+focused+on+FX+%26ndash%3B+as+well+as+other+treasury+responsibilities+%26ndash%3B+during+the+crisis.%0D%0A%26ldquo%3BOne+of+the+effects+of+the+crisis+is+that+senior+management+are+looking+for+more+regular+reporting%2C+not+only+on+the+initial+impact+of+the+crisis+on+FX%2C+but+also+the+effect+of+FX+on+future+cash+flow+and+P%26amp%3BL.+This+can+take+a+substantial+amount+of+time%2C+and+take+away+from+other+critical+activities+on+which+treasurers+are+engaged+without+the+right+tools+in+place.%26rdquo%3B%26nbsp%3B%26mdash%3B+Sebastian+di+Paola%2C+Partner%2C+PwC%0D%0ALessons+from+the+Crisis%0D%0AWhile+it+would+be+inappropriate+to+discuss+the+%26lsquo%3Bopportunities%26rsquo%3B+associated+with+a+pandemic%2C+bearing+in+mind+the+scale+of+human+tragedy%2C+the+crisis+has+emphasised+valuable+lessons+for+treasurers+in+the+way+that+they+manage+their+FX+activities%2C+both+during+a+crisis+and+%26lsquo%3Bbusiness+as+usual%26rsquo%3B%2C+whatever+that+might+resemble.%0D%0A%26ldquo%3BMany+treasurers+have+recognised+the+need+to+revisit+their+FX+exposure+and+hedging+processes+as+a+result+of+the+crisis%2C+which+seemed+less+of+a+priority+during+business+as+usual.+For+example%2C+solutions+such+as+Kantox%2C+with+which+BNP+Paribas+has+a+partnership%2C+helps+automate+the+execution+of+FX+hedges+and+make+the+process+more+systematic%2C+particularly+when+hedging+a+large+volume+of+small+exposures.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0AIn+many+cases%2C+the+crisis+has+resulted+in+treasurers+redoubling+their+efforts+to+improve+operational+efficiency+and+control.%0D%0A%26ldquo%3BWhile+automated+FX+execution+has+become+increasingly+important+for+treasury+teams%2C+we+are+also+seeing+the+pace+and+urgency+of+wider+initiatives+increasing+to+centralise+cash+and+treasury+management+activities+at+a+group+level%2C+automate+processes%2C+and+optimise+account+structures.+Treasurers+are+demanding+more+real-time+information%2C+and+issues+such+as+real-time+hedging+are+now+part+of+client+discussions+as+real-time+payments+and+liquidity+become+a+reality.%26rdquo%3B+%26mdash%3B+Reuben+Kane%2C+FX%2B+Distribution%2C+Global+Markets%2C+BNP+Paribas%0D%0ATop+Tips%0D%0A%26ldquo%3BReview+exposure+collection+and+hedging+processes+as+a+priority+to+improve+accuracy+of+exposures+and+refine+approaches+to+hedging%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0A%26ldquo%3BConsider+automation+tools+and+Algo+execution+to+enable+less+of+a+focus+on+execution%2C+and+more+on+strategy.+Communicate+regularly+with+banks+who+have+experience+across+a+wide+spectrum+of+clients%2C+and+can+therefore+offer+suggestions+and+solutions.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+BNP+Paribas%0D%0A%26ldquo%3BReview+short+term+forecasts+daily%3B+measure+existing+hedges+against+this+forecast%3B+ensure+that+people+are+authorised+to+deal+in+the+markets+if+employees+who+ordinarily+undertake+these+activities+are+not+available.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+SAP%0D%0A%26ldquo%3BContinue+and+potentially+accelerate+programmes+that+are+underway+to+centralise%2C+digitise+and+increase+transparency+of+treasury+processes+and+information.+Identify+what+activities+are+core+and+non-core%2C+and+which+risks+are+material+or+less+so.+Look+at+optimising+account+structures+to+reduce+trapped+liquidity.%26rdquo%3B+%26mdash%3B+Reuben+Kane%2C+BNP+Paribas%0D%0A%26ldquo%3BUse+the+opportunity+of+increased+senior+management+and+Board+scrutiny+to+educate+and+inform+on+what+treasury+does%2C+the+value+it+offers%2C+and+equally+what+it+cannot+do%2C+such+as+managing+economic+risk+and+the+associated+FX+risks%2C+which+remains+a+management+responsibility.%26rdquo%3B+%26mdash%3B+Sebastian+di+Paola%2C+PwC%0D%0A%26nbsp%3B%0D%0A2020+is+the+fifth+anniversary+year+of+the+Journeys+to+Treasury+partnership%2C+comprising+BNP+Paribas%2C+European+Association+of+Corporate+Treasurers+%28EACT%29%2C+SAP+and+PwC.+We+are+marking+this+special+alliance+with+a+%26lsquo%3BJourneys+to+Treasury+Bitesize%26rsquo%3B+series%2C+providing+topical+insights+and+support+for+treasurers+as+they+navigate+this+challenging+period.&source=EACT" target="_blank"><span class="social-button-pre social-linkedin"><i class="fa fa-linkedin fa-fw"></i></span></a><a class="social-button-a" href="https://twitter.com/share?url=http://www.eact.eu/articles/fx-hedging-in-volatile-markets/&text=FX+Hedging+in+Volatile+MarketsIn+the+fifth+article+in+this+special+COVID-19+series%2C+JTT+partners+consider+the+impact+that+the+combination+of+constrained+liquidity+and+FX+volatility+are+having+on+the+way+that+treasurers+manage+their+FX+risk.%0D%0AInitial+Impact+of+the+Crisis+on+Foreign+Exchange%0D%0AAs+we+explored+in+previous+articles+in+this+series%2C+the+initial+impact+of+the+pandemic+on+financial+markets+was+on+liquidity.+This+had+an+impact+on+FX+as+treasurers+needed+to+source+cash+to+fund+liabilities+in+a+particular+currency.+When+liquidity+was+in+short+supply%2C+therefore%2C+some+treasurers+were+obliged+to+access+liquidity+in+whatever+currency+they+could%2C+and+then+swap+into+the+required+currency.+Furthermore%2C+liquidity+in+some+currency+pairs+dried+up+and+spreads+widened%2C+creating+further+obstacles%2C+complexity+and+cost.+Although+market+liquidity+is+easing%2C+albeit+not+to+pre-pandemic+levels%2C+constraints+in+FX+continue%2C+with+particular+challenges+in+emerging+markets.%0D%0A%26ldquo%3BOne+issue+that+treasurers+are+having+to+contend+with+is+execution+risk.+While+they+may+have+access+to+funding%2C+they+need+to+convert+this+to+their+currency+of+choice+which+can+be+difficult+in+the+current+market.+There+are+different+ways+of+achieving+this.+For+example%2C+we+are+seeing+significant+interest+in+our+suite+of+Algo+execution+services+that+offer+our+clients+dynamic+execution+through+more+liquidity+venues.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+Head+of+IRFX+Macro+Sales+UK%2C+BNP+Paribas+Global+Markets%0D%0AWith+many+companies+seeing+revenues+plunging%2C+treasurers+are+often+finding+themselves+overhedged.+It+is+typical+to+see+treasurers+hedging+80%25+or+more+of+exposures+up+to+3+months.+In+addition%2C+many+have+hedged+dividends+that+are+being+postponed+or+reduced.+Many+are+pushing+these+cash+flow+hedges+forward%2C+swapping+forward+or+using+risk+reversals+and+collars.%0D%0A%26ldquo%3BWe%26rsquo%3Bre+seeing+more+treasurers+selectively+using+options.+Some+clients+are+obligated+to+sell+currencies+that+have+significantly+devalued.+Option-based+solutions+offer+the+opportunity+to+benefit+from+future+currency+appreciation.+Others+are+looking+to+sell+volatility+via+outperformance+trades%2C+although+generally+only+those+who+are+not+seeking+to+apply+hedge+accounting+treatment.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+BNP+Paribas+Global+Markets%0D%0AThe+Problem+of+Exposures%0D%0AAlthough+some+treasurers+are+taking+proactive+steps+to+adapt+their+hedging+approach+to+changing+circumstances%2C+this+requires+a+complete+view+of+exposures.+For+many%2C+this+is+a+challenge+at+the+best+of+times%2C+let+alone+during+periods+of+extreme+uncertainty.+There+can+be+a+variety+of+reasons+for+this%2C+not+least+fragmented+systems%2C+lack+of+centralised+treasury+control%2C+and+a+lack+of+awareness+of+the+importance+of+forecasting+at+a+business+level.%0D%0A%26ldquo%3BAs+we+discussed+in+the+last+article+in+this+series%2C+cash+flow+forecasting+is+extremely+difficult+in+the+current+climate%2C+with+major+revenue+changes+in+a+very+short+time%2C+and+significant+future+uncertainty.+Overhedged+positions+create+problems+under+hedge+accounting+rules%2C+with+complex+delinking+and+reallocation+of+hedges%2C+while+it+is+not+necessarily+a+good+time+to+unwind+hedges.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0ATreasurers+are+also+prioritising+their+exposures%2C+and+identifying+which+currencies+are+considered+material+for+hedging.+There+are+two+competing+forces+in+this+regard%3A+if+an+exposure+currency+is+more+volatile%2C+it+may+be+considered+more+material+for+hedging+due+to+the+higher+value+at+risk+%28VaR%29%3B+on+the+other+hand%2C+softer+currencies+are+generally+more+expensive+to+hedge+particularly+given+the+current+lack+of+market+liquidity%2C+which+may+make+hedging+less+worthwhile.+This+puts+treasurers+between+a+rock+and+a+hard+place+in+deciding+whether+to+start+or+stop+hedging+certain+less+material+exposure+currencies.%0D%0A%26ldquo%3BIf+a+treasurer+chooses+not+to+hedge%2C+they+need+to+monitor+this+over+time+to+ensure+that+the+decision+remains+valid.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0ALeveraging+Technology%0D%0AEfficient+systems%2C+data+collation+processes+and+reporting+tools+have+a+key+role+to+play+in+creating+a+complete+view+of+exposures%2C+analysing+how+sensitive+these+exposures+are+to+different+economic+and+market+scenarios%2C+and+identifying+opportunities+to+optimise+FX+management.%0D%0A%26ldquo%3BYou+need+the+right+data%2C+and+presentation+of+this+data%2C+to+enable+treasurers+to+gain+meaningful+insights+into+liquidity+and+cash+and+exposures%2C+and+to+initiate+the+appropriate+measures.+With+better+insights%2C+we+are+seeing+treasurers+taking+a+range+of+actions%2C+such+as+smaller%2C+%26lsquo%3Bfollow+the+sun%26rsquo%3B+hedges+as+spreads+widen+during+the+day%2C+and+more+agile+approaches+to+hedging+solutions.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+Director%2C+Treasury+Management%2C+SAP%0D%0AIn+many+cases%2C+treasurers+had+already+put+in+place+integrated+mechanisms+to+gather+and+present+exposures+effectively%2C+with+the+crisis+accelerating+initiatives+that+were+ongoing.+Where+FX+was+less+of+an+issue+under+%26lsquo%3Bbusiness+as+usual%26rsquo%3B+conditions%2C+treasurers+may+now+be+looking+for+quick+fixes.%0D%0A%26ldquo%3BSeveral+clients+are+now+looking+to+understand+the+opportunities+to+integrate+systems+to+collect+exposures+more+efficiently%2C+and+monitoring+bank+credit+lines%2C+customer+default+rates+and+other+key+metrics+that+impact+on+liquidity%2C+working+capital+and+risk+more+closely.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+SAP%0D%0AArtificial-intelligence+%28AI%29-based+predictive+analytics+have+become+increasingly+common+amongst+treasurers+to+create+perspectives+on+customer+behaviours%2C+working+capital%2C+future+cash+flows+and+exposures%2C+and+there+may+be+a+tendency+to+move+away+from+these+techniques+during+anomalous+market+and+economic+conditions.+In+reality%2C+however%2C+these+tools+continue+to+be+helpful+in+predicting+the+impact+that+the+pandemic+could+have+on+key+metrics.%0D%0AIt+is+not+only+in+treasury+where+the+benefits+of+more+automated+processes%2C+sophisticated+analysis+and+accessible+reporting+accrue.+Senior+management+have+become+more+focused+on+FX+%26ndash%3B+as+well+as+other+treasury+responsibilities+%26ndash%3B+during+the+crisis.%0D%0A%26ldquo%3BOne+of+the+effects+of+the+crisis+is+that+senior+management+are+looking+for+more+regular+reporting%2C+not+only+on+the+initial+impact+of+the+crisis+on+FX%2C+but+also+the+effect+of+FX+on+future+cash+flow+and+P%26amp%3BL.+This+can+take+a+substantial+amount+of+time%2C+and+take+away+from+other+critical+activities+on+which+treasurers+are+engaged+without+the+right+tools+in+place.%26rdquo%3B%26nbsp%3B%26mdash%3B+Sebastian+di+Paola%2C+Partner%2C+PwC%0D%0ALessons+from+the+Crisis%0D%0AWhile+it+would+be+inappropriate+to+discuss+the+%26lsquo%3Bopportunities%26rsquo%3B+associated+with+a+pandemic%2C+bearing+in+mind+the+scale+of+human+tragedy%2C+the+crisis+has+emphasised+valuable+lessons+for+treasurers+in+the+way+that+they+manage+their+FX+activities%2C+both+during+a+crisis+and+%26lsquo%3Bbusiness+as+usual%26rsquo%3B%2C+whatever+that+might+resemble.%0D%0A%26ldquo%3BMany+treasurers+have+recognised+the+need+to+revisit+their+FX+exposure+and+hedging+processes+as+a+result+of+the+crisis%2C+which+seemed+less+of+a+priority+during+business+as+usual.+For+example%2C+solutions+such+as+Kantox%2C+with+which+BNP+Paribas+has+a+partnership%2C+helps+automate+the+execution+of+FX+hedges+and+make+the+process+more+systematic%2C+particularly+when+hedging+a+large+volume+of+small+exposures.%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0AIn+many+cases%2C+the+crisis+has+resulted+in+treasurers+redoubling+their+efforts+to+improve+operational+efficiency+and+control.%0D%0A%26ldquo%3BWhile+automated+FX+execution+has+become+increasingly+important+for+treasury+teams%2C+we+are+also+seeing+the+pace+and+urgency+of+wider+initiatives+increasing+to+centralise+cash+and+treasury+management+activities+at+a+group+level%2C+automate+processes%2C+and+optimise+account+structures.+Treasurers+are+demanding+more+real-time+information%2C+and+issues+such+as+real-time+hedging+are+now+part+of+client+discussions+as+real-time+payments+and+liquidity+become+a+reality.%26rdquo%3B+%26mdash%3B+Reuben+Kane%2C+FX%2B+Distribution%2C+Global+Markets%2C+BNP+Paribas%0D%0ATop+Tips%0D%0A%26ldquo%3BReview+exposure+collection+and+hedging+processes+as+a+priority+to+improve+accuracy+of+exposures+and+refine+approaches+to+hedging%26rdquo%3B+%26mdash%3B+Francois+Masquelier%2C+EACT%0D%0A%26ldquo%3BConsider+automation+tools+and+Algo+execution+to+enable+less+of+a+focus+on+execution%2C+and+more+on+strategy.+Communicate+regularly+with+banks+who+have+experience+across+a+wide+spectrum+of+clients%2C+and+can+therefore+offer+suggestions+and+solutions.%26rdquo%3B+%26mdash%3B+Ruth+Bellinger%2C+BNP+Paribas%0D%0A%26ldquo%3BReview+short+term+forecasts+daily%3B+measure+existing+hedges+against+this+forecast%3B+ensure+that+people+are+authorised+to+deal+in+the+markets+if+employees+who+ordinarily+undertake+these+activities+are+not+available.%26rdquo%3B+%26mdash%3B+Dr+Arif+Esa%2C+SAP%0D%0A%26ldquo%3BContinue+and+potentially+accelerate+programmes+that+are+underway+to+centralise%2C+digitise+and+increase+transparency+of+treasury+processes+and+information.+Identify+what+activities+are+core+and+non-core%2C+and+which+risks+are+material+or+less+so.+Look+at+optimising+account+structures+to+reduce+trapped+liquidity.%26rdquo%3B+%26mdash%3B+Reuben+Kane%2C+BNP+Paribas%0D%0A%26ldquo%3BUse+the+opportunity+of+increased+senior+management+and+Board+scrutiny+to+educate+and+inform+on+what+treasury+does%2C+the+value+it+offers%2C+and+equally+what+it+cannot+do%2C+such+as+managing+economic+risk+and+the+associated+FX+risks%2C+which+remains+a+management+responsibility.%26rdquo%3B+%26mdash%3B+Sebastian+di+Paola%2C+PwC%0D%0A%26nbsp%3B%0D%0A2020+is+the+fifth+anniversary+year+of+the+Journeys+to+Treasury+partnership%2C+comprising+BNP+Paribas%2C+European+Association+of+Corporate+Treasurers+%28EACT%29%2C+SAP+and+PwC.+We+are+marking+this+special+alliance+with+a+%26lsquo%3BJourneys+to+Treasury+Bitesize%26rsquo%3B+series%2C+providing+topical+insights+and+support+for+treasurers+as+they+navigate+this+challenging+period." target="_blank"><span class="social-button-pre social-twitter"><i class="fa fa-twitter fa-fw"></i></span></a><a class="social-button-a" href="http://www.facebook.com/sharer.php?u=http://www.eact.eu/articles/fx-hedging-in-volatile-markets/&amp;t==FX+Hedging+in+Volatile+Markets" target="_blank"><span class="social-button-pre social-facebook"><i class="fa fa-facebook fa-fw"></i></span></a>				
+			</div>
+		</div>		
+		
+		<div class="col-xs-12 col-sm-10 col-md-3 small-col-gutter" id="extra_news">
+			<div class="margintop-15">
+			
+		<div class="">
+			<div class="dark-white_b border-bottom">
+				<div>
+					<h2 class="heading">Articles</h2>
+					<hr class="heading_hr" width="30px">
+				</div>        
+			<!-- Articles  : BEGIN -->				
+			<div class="row">
+	
+	<div class="col-xs-12">
+		<div class="news_inner ">
+            <div class="_thumb_outer"><img src="../../Core/Images/Articles/GLEIF-Article-EACT(1198x1249).png" alt="Photo from The LEI: Unlocking the Benefits of a Secure Payments Ecosystem for Corporate Treasurers" title="The LEI: Unlocking the Benefits of a Secure Payments Ecosystem for Corporate Treasurers" class="_thumb_inner"></div>
+			
+			<h3 class="title">The LEI: Unlocking the Benefits of a Secure Payments Ecosystem for Corporate Treasurers</h3>
+			<p>The EACT has been advocating for a digital identity for Corporates for many years now. We believe that, Corporates, like individuals, must have a single identity which help them to identify itself and identify third parties as well in this digital era.</p>
+			<a href="../unlocking-benefits-of-secure-payments/index.html" class="btn btn-eact-success btn-sm btn-square-lg" >Read</a>	
+		</div>
+	</div>
+	
+	<div class="col-xs-12">
+		<div class="news_inner evenrow">
+            <div class="_thumb_outer"><img src="../../Core/Images/Articles/EACT-LKSG-Article(1198x249).png" alt="Photo from LkSG Relevant for Treasury on a Case-by-case Basis" title="LkSG Relevant for Treasury on a Case-by-case Basis" class="_thumb_inner"></div>
+			
+			<h3 class="title">LkSG Relevant for Treasury on a Case-by-case Basis</h3>
+			<p>The Supply Chain Due Diligence Act (LkSG) creates the legal framework to improve the protection of the environment and human rights along German supply chains. GACT spoke to Dr. Julia Sitter (White &amp; Case LLP) about the relevance and need for action by treasury departments.</p>
+			<a href="../lksg-relevant-for-treasury/index.html" class="btn btn-eact-success btn-sm btn-square-lg" >Read</a>	
+		</div>
+	</div>
+	
+	<div class="col-xs-12">
+		<div class="news_inner ">
+            <div class="_thumb_outer"><img src="../../Core/Images/Articles/CMU_EACT-Article(1198x249).png" alt="Photo from CMU, The Come-Back!" title="CMU, The Come-Back!" class="_thumb_inner"></div>
+			
+			<h3 class="title">CMU, The Come-Back!</h3>
+			<p>The Capital Market Union, which was one of the main objectives of the Vander Leyen Commission, is back in the limelight, and is likely to become a priority for the next Commission next summer.</p>
+			<a href="../cmu-the-come-back/index.html" class="btn btn-eact-success btn-sm btn-square-lg" >Read</a>	
+		</div>
+	</div>
+	
+	<div class="col-xs-12">
+		<div class="news_inner evenrow">
+            <div class="_thumb_outer"><img src="../../Core/Images/Articles/Corporate-Treasurers-Priorities-2024(1198x249).png" alt="Photo from What Will be the Corporate Treasurer's Priorities for 2024?" title="What Will be the Corporate Treasurer's Priorities for 2024?" class="_thumb_inner"></div>
+			
+			<h3 class="title">What Will be the Corporate Treasurer's Priorities for 2024?</h3>
+			<p>General insights into the common priorities of corporate treasurers that will still be relevant in 2024.</p>
+			<a href="../corporate-treasurers-priorities-2024/index.html" class="btn btn-eact-success btn-sm btn-square-lg" >Read</a>	
+		</div>
+	</div>
+	
+	<div class="col-xs-12">
+		<div class="news_inner ">
+            <div class="_thumb_outer"><img src="../../Core/Images/Articles/EACT_Counterparty-Risk(1198x249).png" alt="Photo from Counterparty Risk Assessment by Treasurers" title="Counterparty Risk Assessment by Treasurers" class="_thumb_inner"></div>
+			
+			<h3 class="title">Counterparty Risk Assessment by Treasurers</h3>
+			<p>François Masquelier lists some comprehensive steps to best assess counterparty risks.</p>
+			<a href="../counterparty-risk-assessment/index.html" class="btn btn-eact-success btn-sm btn-square-lg" >Read</a>	
+		</div>
+	</div></div>
+							<div class="col-xs-12" style="margin-top:15px; text-align:center;"><a href="../index.html" class="btn btn-eact-success btn-sm btn-square-lg">More Articles</a></div>	
+
+			<!-- Articles  : END -->
+			</div>
+		</div>	
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!-- Modal : BEGIN -->	
+<div class="modal fade" tabindex="-1" role="dialog" id="eact_Modal">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content" id="popup_pre">
+	  <div class="modal-body" style="padding: 0;" id="popup_content">
+		<div class="row" >
+			<div class="col-xs-12 col-sm-6" style="background-color: #0C7C2C; height: 200px; color: #fff; text-align: center;">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true" style="font-size: 100px; padding-top: 10%"></span><br/>
+					<p style="font-size: 25px"><strong id="successtext">Updated</strong></p>
+			</div>
+		<a id="continue_modal">	
+			<div class="col-xs-12 col-sm-6" style="background-color: #0A6223; height: 200px; color: #fff; text-align: center;">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size: 100px; padding-top: 10%"></span><br/>
+					<p style="font-size: 25px"><strong>Continue</strong></p>
+			</div>
+		</a>
+		</div>
+	  </div>		
+	</div>
+  </div>
+</div>
+<!-- Modal : END -->	
+</div>
+
+
+<!-- Core JavaScript -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="M__EACT">
+  <div class="modal-dialog" role="document" id="M__Content">
+    <div class="modal-content" >
+     
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="M_Search">
+  <div class="modal-dialog" role="document" id="Search_Content">
+    <div class="modal-content" >
+     
+		
+		<div class="gcse-search"></div>
+	
+		
+		
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="myNav" class="overlay">
+ 	
+  <div class="overlay-content">
+    <a href="../../index.html"><img id="logo" src="../../Core/Images/Logos/EACT-Logo_White_August17.png" alt="European Association of Corporate Treasurers (EACT)" /></a>	 <ul class="nolist">
+		 
+	 
+<ul class="nav navbar-nav right" style="width:0px;overflow:hidden;height:0px;">
+    <gcse:searchresults-only></gcse:searchresults-only>
+</ul>
+<form id="cse-search-box-form-id" onsubmit="return executeQuery();" role="search">
+  <div id="hide_search" style="display:none; padding:15px;"> 
+  <div class="input-group input-group-lg" >
+    <input type="text" class="form-control" id="cse-search-input-box-id" style="border-radius: 0px;" autocomplete="on" placeholder="Search for...">
+	<span class="input-group-btn">
+      <button type="submit" class="btn btn-eact-success btn-square"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    </span>
+  </div>
+  </div>
+</form> 		 
+		 <li ><a href="../../index.html">Home</a></li> <li ><a href="../../about.html">About Us</a></li> <li ><a href="../../nta.html">Members</a></li> <li class="active"><a href="../../articles.html">Articles</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Knowledge Hub <span class="caret"></span></a><ul class="dropdown-menu"> <li ><a href="../../briefing-focus.html">Briefing Focus</a></li> <li ><a href="../../financial-crime.html">Financial Crime</a></li> <li ><a href="../../journeys-to-treasury.html">Journeys To Treasury</a></li> <li ><a href="../../digitalization.html">Digitalization</a></li> <li ><a href="../../payments.html">Payments</a></li></ul></li> <li ><a href="../../regulation-and-policy.html">Regulation & Policy</a></li> <li ><a href="../../news.html">News</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Initiatives <span class="caret"></span></a><ul class="dropdown-menu"> <li ><a href="https://eact.events/" target="_blank">EACT Summit</a></li> <li ><a href="../../euro-pp-charter.html">Euro PP Charter</a></li> <li ><a href="../../fx-global-code.html">FX Global Code Register</a></li> <li ><a href="../../financial-regulation-advisory-group.html">Financial Regulation Advisory Group (FRAG)</a></li></ul></li> <li ><a href="../../event.html">Events</a></li> <li ><a href="https://eactexchange.eact.eu/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;Members Area</a></li>		 <li><a class="btn" id="show_search">Search</a></li>
+	 </ul>
+  </div>
+ <p style="text-align: center; margin-top: 20px;">
+ <button onclick="closeNav()"  class="btn btn-eact-success btn-circle btn-xl"><i class="glyphicon glyphicon-remove" style="top: 4px;"></i></button>  
+</p> 
+  
+</div>
+
+<button id="navagation_button_mobile" onclick="openNav()"  class="btn btn-eact-purple btn-circle btn-xl" style="position: fixed;
+top: 15px;
+float: right;
+right:30px;"><i class="glyphicon glyphicon-menu-hamburger" style="top: 4px;"></i></button>
+
+
+<div class="container-fluid footer-bg">
+	<div class="container-fluid maxwidth1366" style="min-height: 200px;">
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-4" style="padding: 15px;">
+				<strong>Contact Us</strong><br/>
+				<strong>Email General Enquiries:</strong> <a style="color: #fff;" href="mailto:secretary@eact.eu">secretary@eact.eu</a><br/>
+				<strong>Email Policy & Regulation:</strong> <a style="color: #fff;" href="mailto:EACTsecretariat@eact.eu">EACTsecretariat@eact.eu</a><br/>
+				<strong>Telephone:</strong> +33&nbsp;(0)1&nbsp;42&nbsp;81&nbsp;53&nbsp;98<br style="margin-bottom: 5px;">
+				<strong>Website:</strong> <a style="color: #fff;" href="../../contact/index.html">Get in touch here</a><br style="margin-bottom: 5px;">
+				<a class="btn btn-social btn-xs btn-linkedin" target="_blank" href="https://www.linkedin.com/company/11469890/" style="margin-top: 7px;"><i class="fa fa-linkedin"></i> Follow us on Linkedin</a><br/><br/>
+				<a style="color: #fff;" href="https://eactexchange.eact.eu/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;<strong>Members Area</strong</a><br/></br>
+				<a style="color: #fff;" href="../../privacy/index.html">Privacy policy</a> <br/>
+				
+			</div>
+			<div class="col-xs-12 col-sm-4" style="padding: 15px;">
+				<a style="color: #fff;" href="../../about/index.html">About us</a> <br/>
+				<a style="color: #fff;" href="../../news/index.html">News</a> <br/>
+				<a style="color: #fff;" href="../../event/index.html">Events</a> <br/>
+				<a style="color: #fff;" href="../../videos/index.html">Videos</a> <br/>
+				<a style="color: #fff;" href="../../nta/index.html">Connect with Member Associations</a>
+			</div>			
+			<div class="col-xs-12 col-sm-4" style="padding: 15px;">
+				<strong>EACT Head Office</strong><br/>
+				46 rue d'Amsterdam<br/>
+				75009 Paris<br/>
+				France<br/>
+			</div>	
+			<div class="col-xs-12 col-sm-4" style="padding: 15px;">
+				European Commission Transparency Register Number: 674630747738-35
+			</div>	
+		
+		</div>
+	</div>
+</div>
+
+
+<!-- Add Scripts Here --> 
+
+<script src="../../Core/JS/eact_build.min3860.js?v=1" type="text/javascript"></script>
+<script src="../../Core/JS/core.minffaf.js?v=1.4"></script><script>
+$(document).off("click","#document_show").on("click", '#document_show', function() {
+"use strict";	
+
+	var href = $(this).data("href");
+	
+	$("#document_viewer").attr("src", href);
+	$("#extra_news").removeClass("col-sm-12 col-md-12").addClass("col-sm-4 col-md-3");
+	$("#document_viewer_pre").removeClass( "hidden" );
+	
+});	
+	
+	
+$(document).ready(function(){
+"use strict";	
+  newsheight();
+});
+
+$(window).resize(function(){
+"use strict";	
+  newsheight();
+});
+
+function newsheight () {		
+"use strict";
+
+	var newsheight = $("#article_body").outerHeight(); 	 
+	
+	if(newsheight < 375){
+	$("#extra_news").removeClass("col-md-3").addClass("col-md-12");
+	}
+	
+	if(newsheight > 375){
+	$("#extra_news").removeClass("col-md-12").addClass("col-md-3");
+	}	
+}
+</script>	
+<script>
+$('.row-masonry').masonry({
+	itemSelector : '.col-sm-6'
+});	
+	
+</script>	
+
+	
+</body>
+
+<!-- Mirrored from www.eact.eu/articles/fx-hedging-in-volatile-markets/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Mar 2024 08:41:50 GMT -->
+</html>

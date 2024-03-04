@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.eact.eu	TRUE	/	FALSE	1999999999	PHPSESSID	9bcb82c04f6bb37a1c7def6f10649cec
+eact.eu	TRUE	/	FALSE	1999999999	PHPSESSID	f4402f08a0d2c968364a060b94b91b93
+
